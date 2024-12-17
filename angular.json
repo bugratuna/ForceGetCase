@@ -29,9 +29,15 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
               }
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -70,6 +76,9 @@
               "buildTarget": "ForceGetCase:build:development"
             }
           },
+          "options": {
+            "port": 4207
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
@@ -91,6 +100,7 @@
               }
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -98,5 +108,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "3410819b-6738-40fc-9cc4-c072ed4e0aae"
   }
 }

@@ -1,0 +1,34 @@
+<div class="offer-list-container">
+  @defer (when offerList().length > 0) {
+    <h2>{{ "OFFER_LIST" | translate }}</h2>
+
+    <nz-table [nzBordered]="true" [nzSize]="'middle'">
+      <thead>
+        <tr>
+          <th nzWidth="25%">{{ "MOVE" | translate }}</th>
+          <th nzWidth="25%">{{ "MOVEMENT_TYPE" | translate }}</th>
+          <th nzWidth="20%">{{ "COUNTY" | translate }}</th>
+          <th nzWidth="20%">{{ "CITY" | translate }}</th>
+          <th nzWidth="10%">{{ "PALLET_COUNT" | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (offer of offerList(); track offer) {
+          <tr>
+            <td>{{ offer.mode }}</td>
+            <td>{{ offer.movementType }}</td>
+            <td>{{ offer.country }}</td>
+            <td>{{ offer.city }}</td>
+            <td>{{ offer.palletCount }}</td>
+          </tr>
+        }
+      </tbody>
+    </nz-table>
+  } @placeholder {
+    @if (loading()) {
+      <nz-spin nzSize="large" nzSimple></nz-spin>
+    } @else if (offerList().length === 0) {
+      <p>{{ "NOT_YET_OFFER" | translate }}</p>
+    }
+  }
+</div>

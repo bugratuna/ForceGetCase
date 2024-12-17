@@ -1,0 +1,71 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #002766;
+  color: white;
+}
+
+.logo h1 {
+  margin: 0;
+  color: white;
+}
+
+.tabs button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #1890ff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tabs button:hover {
+  background-color: #40a9ff;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.language-selector {
+  margin-right: 20px;
+}
+
+.language-selector select {
+  padding: 5px;
+  border-radius: 4px;
+  color: #002766;
+}
+
+.profile {
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.profile i {
+  margin-left: 5px;
+}
+
+.tabs button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #1890ff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tabs button:hover {
+  background-color: #40a9ff;
+}
+
+.tabs .btn-active {
+  background-color: blueviolet;
+}

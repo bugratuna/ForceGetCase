@@ -1,0 +1,108 @@
+{
+  "users": [
+    {
+      "id": "asdasd1",
+      "email": "test@example.com",
+      "password": "test1234"
+    }
+  ],
+  "offers": [
+    {
+      "id": "123s",
+      "mode": "LCL",
+      "movementType": "Door to Door",
+      "incoterm": "DDP",
+      "country": "USA",
+      "city": "New York",
+      "packageType": "Carton",
+      "unit1": "CM",
+      "unit2": "KG",
+      "currency": "USD",
+      "palletCount": 20,
+      "dimensions": {
+        "type": "Carton",
+        "width": 12,
+        "length": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "af7b",
+      "mode": "LCL",
+      "movementType": "Door to Door",
+      "incoterm": "DDP",
+      "country": "China",
+      "city": "Shanghai",
+      "unit1": "CM",
+      "unit2": "KG",
+      "currency": "EUR",
+      "palletCount": 12
+    }
+  ],
+  "countries": [
+    {
+      "name": "USA",
+      "cities": [
+        "New York",
+        "Los Angeles",
+        "Miami",
+        "Minnesota"
+      ],
+      "id": "cd09"
+    },
+    {
+      "name": "China",
+      "cities": [
+        "Beijing",
+        "Shanghai"
+      ],
+      "id": "34b6"
+    },
+    {
+      "name": "Turkey",
+      "cities": [
+        "Istanbul",
+        "Izmir"
+      ],
+      "id": "9929"
+    }
+  ],
+  "unit1": [
+    {
+      "id": "1",
+      "value": "CM"
+    },
+    {
+      "id": "2",
+      "value": "IN"
+    }
+  ],
+  "unit2": [
+    {
+      "id": "1",
+      "value": "KG"
+    },
+    {
+      "id": "2",
+      "value": "LB"
+    }
+  ],
+  "currency": [
+    {
+      "id": "1",
+      "value": "USD"
+    },
+    {
+      "id": "2",
+      "value": "EUR"
+    },
+    {
+      "id": "3",
+      "value": "GBP"
+    },
+    {
+      "id": "4",
+      "value": "TRY"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+<header class="header">
+  <div class="logo">
+    <h1>{{ "COURIER_COMPANY" | translate }}</h1>
+  </div>
+
+  @if (!routeAddress().includes("login")) {
+    <nav class="tabs">
+      <button
+        routerLink="offer"
+        routerLinkActive="btn-active"
+        (click)="navigateTo('/offer')"
+      >
+        {{ "CREATE_OFFER" | translate }}
+      </button>
+      <button
+        routerLink="offer-list"
+        routerLinkActive="btn-active"
+        (click)="navigateTo('/offer-list')"
+      >
+        {{ "OFFER_LIST" | translate }}
+      </button>
+    </nav>
+  }
+  <!-- Dil Seçici ve Profil Dropdown -->
+  <div class="actions">
+    <div class="language-selector">
+      <label for="language">Dil: </label>
+      <select id="language" (change)="changeLanguage($event)">
+        @for (lang of languages; track lang) {
+          <option
+            style="color: #002766"
+            [value]="lang"
+            [selected]="selectedLanguage === lang"
+          >
+            {{ lang | uppercase }}
+          </option>
+        }
+      </select>
+    </div>
+
+    @if (!routeAddress().includes("login")) {
+      <!-- Profil Dropdown -->
+      <a nz-dropdown [nzDropdownMenu]="menu" style="color: white">
+        {{ "PROFILE" | translate }} <span nz-icon nzType="user"></span>
+      </a>
+      <nz-dropdown-menu #menu="nzDropdownMenu">
+        <ul nz-menu>
+          <li nz-menu-item (click)="logout()">{{ "LOGOUT" | translate }}</li>
+        </ul>
+      </nz-dropdown-menu>
+    }
+  </div>
+</header>

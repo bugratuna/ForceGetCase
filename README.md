@@ -1,27 +1,42 @@
-# ForceGetCase
+# Kargo Teklif Yönetim Sistemi (Angular 18 + NG-ZORRO)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+Bu proje, kargo şirketleri için teklif oluşturma ve teklifleri listeleme amacıyla geliştirilmiş bir Angular uygulamasıdır. Proje, **JSON Server** kullanarak sahte backend ile çalışır ve **NG-ZORRO** UI kütüphanesi ile geliştirilmiştir.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 **Proje İşlevleri**
 
-## Code scaffolding
+1. **Teklif Oluşturma Sayfası**:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Kullanıcılar, kargo detaylarını doldurarak teklif oluşturabilir.
+- Mode, hareket türü, ülke, şehir, paket tipi, birim seçenekleri gibi alanlar içermektedir.
 
-## Build
+2. **Teklif Listeleme Sayfası**:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Oluşturulan teklifleri tablo halinde görüntüler.
 
-## Running unit tests
+3. **Layout Yapısı**:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Header**: Dil seçici (TR, ENG, DE) ve profil dropdown'u bulunur.
+  - Profil dropdown altında **"Çıkış"** butonu ile kullanıcı oturumu sonlandırılır.
+- **Footer**: Sayfanın alt kısmında sabit bir footer bulunur.
+- **Ana Layout**: Header, footer ve sayfa içeriğini (main) düzenler.
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🛠 **Kullanılan Teknolojiler**
 
-## Further help
+- **Angular 18**: Frontend geliştirme için kullanıldı.
+- **NG-ZORRO**: UI bileşen kütüphanesi (https://ng.ant.design/).
+- **JSON Server**: Sahte backend için kullanıldı.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## 🔧 **Kurulum Adımları**
+
+### 1. Projeyi Klonlayın
+
+```bash
+git clone <proje-repo-url>
+cd <proje-klasoru>
+```

@@ -1,0 +1,68 @@
+<div class="login-container">
+  <div class="login-box">
+    <h1 class="login-title">
+      {{ "COURIER_COMPANY_MANAGEMENT_PANEL" | translate }}
+    </h1>
+
+    <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+      <nz-input-group
+        [nzSuffix]="suffixTemplateInfo"
+        [nzPrefix]="prefixTemplateUser"
+      >
+        <input
+          type="text"
+          formControlName="username"
+          nz-input
+          [placeholder]="'ENTER_YOUR_USERNAME' | translate"
+        />
+      </nz-input-group>
+      <ng-template #prefixTemplateUser
+        ><span nz-icon nzType="user"></span
+      ></ng-template>
+      <ng-template #suffixTemplateInfo>
+        <span
+          nz-icon
+          nz-tooltip
+          [nzTooltipTitle]="'ENTER_USERNAME_INFO' | translate"
+          nzType="info-circle"
+        ></span>
+      </ng-template>
+
+      <nz-form-item>
+        <nz-form-control
+          [nzErrorTip]="'MIN_PASS_8_CHARACTERS' | translate"
+          style="margin-top: 10px"
+        >
+          <nz-input-group nzPrefixIcon="lock">
+            <input
+              nz-input
+              type="password"
+              formControlName="password"
+              [placeholder]="'PASSWORD' | translate"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+      @if (loginError()) {
+        <nz-alert
+          [nzType]="'error'"
+          [nzMessage]="'PASSWORD_WARNING' | translate"
+          [nzShowIcon]="true"
+        ></nz-alert>
+      }
+
+      <nz-form-item>
+        <button
+          nz-button
+          style="margin-top: 10px"
+          [nzType]="'primary'"
+          [disabled]="isLoading || !loginForm.valid"
+          [nzLoading]="isLoading"
+        >
+          {{ "LOGIN" | translate }}
+        </button>
+      </nz-form-item>
+    </form>
+  </div>
+</div>

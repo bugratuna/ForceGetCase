@@ -1,0 +1,19 @@
+.offer-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input,
+nz-select {
+  width: 100%;
+  margin-bottom: 15px;
+}

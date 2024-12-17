@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'ForceGetCase' title`, () => {
+  it(`should have the 'ForceGetSoftware' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ForceGetCase');
+    expect(app.title).toEqual('ForceGetSoftware');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ForceGetCase');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ForceGetSoftware');
   });
 });

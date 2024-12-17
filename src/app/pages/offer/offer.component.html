@@ -1,0 +1,78 @@
+<div class="offer-container">
+  <h2>Teklif Oluştur</h2>
+  <form [formGroup]="formGroup" (ngSubmit)="submitOffer()">
+    <label>{{ "MODE" | translate }}:</label>
+    <nz-select formControlName="mode" name="mode" required>
+      <nz-option nzValue="LCL" nzLabel="LCL"></nz-option>
+      <nz-option nzValue="FCL" nzLabel="FCL"></nz-option>
+      <nz-option nzValue="Air" nzLabel="Air"></nz-option>
+    </nz-select>
+
+    <label>{{ "MOVEMENT_TYPE" | translate }}:</label>
+    <nz-select formControlName="movementType" name="movementType" required>
+      <nz-option nzValue="Door to Door" nzLabel="Door to Door"></nz-option>
+      <nz-option nzValue="Port to Door" nzLabel="Port to Door"></nz-option>
+    </nz-select>
+
+    <label>Incoterms:</label>
+    <nz-select formControlName="incoterm" name="incoterm" required>
+      <nz-option nzValue="DDP" nzLabel="Delivered Duty Paid (DDP)"></nz-option>
+      <nz-option nzValue="DAT" nzLabel="Delivered At Place (DAT)"></nz-option>
+    </nz-select>
+
+    <label>{{ "COUNTRY" | translate }}:</label>
+    <nz-select formControlName="country" name="country" required>
+      @for (country of countries(); track country) {
+        <nz-option
+          [nzValue]="country.name"
+          [nzLabel]="country.name"
+        ></nz-option>
+      }
+    </nz-select>
+
+    <label>{{ "CITY" | translate }}:</label>
+    <nz-select
+      formControlName="city"
+      name="city"
+      required
+      [nzDisabled]="cities().length === 0"
+    >
+      @for (city of cities(); track city) {
+        <nz-option [nzValue]="city" [nzLabel]="city"></nz-option>
+      }
+    </nz-select>
+
+    <label>Unit-1:</label>
+    <nz-select formControlName="unit1" name="Unit 1" required>
+      @for (unit of unit1(); track unit) {
+        <nz-option [nzValue]="unit.value" [nzLabel]="unit.value"></nz-option>
+      }
+    </nz-select>
+
+    <label>Unit-2:</label>
+    <nz-select formControlName="unit2" name="Unit 2" required>
+      @for (unit of unit2(); track unit) {
+        <nz-option [nzValue]="unit.value" [nzLabel]="unit.value"></nz-option>
+      }
+    </nz-select>
+
+    <label>{{ "CURRENCY_TYPE" | translate }}:</label>
+    <nz-select formControlName="currency" name="currency" required>
+      @for (curr of currency(); track curr) {
+        <nz-option [nzValue]="curr.value" [nzLabel]="curr.value"></nz-option>
+      }
+    </nz-select>
+
+    <label>{{ "PALLET_COUNT" | translate }}:</label>
+    <input
+      type="number"
+      formControlName="palletCount"
+      name="palletCount"
+      required
+    />
+
+    <button nz-button nzType="primary" type="submit" [nzLoading]="loading()">
+      {{ "EXECUTE" | translate }}
+    </button>
+  </form>
+</div>
