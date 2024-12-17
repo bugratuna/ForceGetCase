@@ -124,13 +124,7 @@ src/
 
 - JSON Server ile sahte backend kullanıldığı için veriler **db.json** dosyasına kaydedilir.
 - Sayfalar arasında geçiş yaparak oluşturduğunuz teklifleri hemen listeleyebilirsiniz.
-- Header'daki dil seçici şu an sadece **console.log** kullanarak dil değişimini simüle etmektedir.
 
----
-
-## 📢 **Destek**
-
-Herhangi bir sorun yaşarsanız lütfen proje sahibi ile iletişime geçin veya bir **Issue** açın.
 
 ---
 
