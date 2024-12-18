@@ -37,6 +37,18 @@
       "unit2": "KG",
       "currency": "EUR",
       "palletCount": 12
+    },
+    {
+      "id": "3421",
+      "mode": "LCL",
+      "movementType": "Door to Door",
+      "incoterm": "DDP",
+      "country": "USA",
+      "city": "Los Angeles",
+      "unit1": "CM",
+      "unit2": "KG",
+      "currency": "TRY",
+      "palletCount": 25
     }
   ],
   "countries": [

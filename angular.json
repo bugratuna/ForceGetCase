@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ForceGetCase": {
+    "CourierCase": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/force-get-case",
+            "outputPath": "dist/cargo-get-case",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -70,14 +70,14 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ForceGetCase:build:production"
+              "buildTarget": "CargoGetCase:build:production"
             },
             "development": {
-              "buildTarget": "ForceGetCase:build:development"
+              "buildTarget": "CargoGetCase:build:development"
             }
           },
           "options": {
-            "port": 4207
+            "port": 4206
           },
           "defaultConfiguration": "development"
         },
